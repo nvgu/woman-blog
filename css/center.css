@@ -39,6 +39,7 @@
     font-family: Open Sans;
 }
 .info_menu__cards{ 
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 20px;
@@ -49,7 +50,7 @@
 }
 .info_menu__card_lg{
     grid-column: span 3;
-
+    height: 552px;
 }
 .info_menu__cards_title{
     font-family: Spectral SC;
@@ -74,7 +75,37 @@
     position: absolute;
 }
 .info_menu__text_down{
+    width: 430px;
     position: absolute;
     top: 359px;
     left: 82px;
+}
+.info_menu__cards_title__down{
+    padding: 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+}
+.info_menu__cards_desc__down{
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+}
+.info_menu__card_down{
+    width: 430px;
+    color: #ffffff;
+}
+.info_button{
+    display: flex;
+    justify-content: center;
+    margin-top: 104px;
+}
+.info_button__down{
+    width: 224px;
+    height: 46px;
+    border: 1px solid #202117;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
 }
