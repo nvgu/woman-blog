@@ -2,7 +2,7 @@
 
 .info_container{
     width: 1200px;
-    padding: 83px 120px 85px;
+    padding: 83px 120px 30px;
     margin: 0 auto;
 }
 .info_menu{
@@ -109,3 +109,58 @@
     border-radius: 10px;
     outline: none;
 }
+/*Info style end*/
+
+/*Annotation style start*/
+
+.annotation{
+    padding: 55px 120px 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.annotation_menu{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 49px;
+}
+.annotation_menu__title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 55px;
+}
+.annotation_container{
+    display: flex;
+}
+.annotation_title{
+    margin-top: 42px;
+    margin-left: 40px;
+}
+.annotation_title_text{
+    width: 497px;
+    height: 366px;
+    margin-bottom: 98px;
+}
+.annotation_text{
+   margin-bottom: 30px; 
+   margin-top: 0;
+}
+.annotation_text:last-child{
+    margin-bottom: 0;
+}
+.annotation_text__down{
+    font-family: Open Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+}
+.annotation_container__down::before{
+    position: absolute;
+    content: "";
+    width: 215px;
+    border-top: 3px solid #D7D1C9;
+    transform: rotate(-90deg);
+}
+
+/*Annotation style end*/
