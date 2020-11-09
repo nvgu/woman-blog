@@ -108,13 +108,14 @@
     box-sizing: border-box;
     border-radius: 10px;
     outline: none;
+    background-color: transparent;
 }
 /*Info style end*/
 
 /*Annotation style start*/
 
 .annotation{
-    padding: 55px 120px 30px;
+    padding: 11px 120px 30px;
     width: 1200px;
     margin: 0 auto;
 }
@@ -127,6 +128,7 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 55px;
+    margin: 0;
 }
 .annotation_container{
     display: flex;
@@ -135,7 +137,7 @@
     margin-top: 42px;
     margin-left: 40px;
 }
-.annotation_title_text{
+.annotation_title_top{
     width: 497px;
     height: 366px;
     margin-bottom: 98px;
@@ -154,6 +156,8 @@
     font-size: 30px;
     line-height: 40px;
     margin: 0;
+    width: 550px;
+    height: 160px;
 }
 .annotation_container__down::before{
     position: absolute;
@@ -161,6 +165,46 @@
     width: 215px;
     border-top: 3px solid #D7D1C9;
     transform: rotate(-90deg);
+    margin-top: 77px;
+    margin-left: -128px;
 }
-
 /*Annotation style end*/
+
+/*Portfolio style start*/
+
+.portfolio{
+    padding: 99px 120px 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.portfolio_caption{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 49px;
+}
+.portfolio_caption_title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 55px;
+    margin: 0;
+}
+.portfolio_item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    box-sizing: border-box;
+}
+.portfolio_item__container{
+    position: relative;
+    height: 525px;
+}
+.portfolio_container__pic{
+    display: flex;
+    position: absolute;
+}
+.portfolio_container_title{
+    position: absolute;
+    top: 140px;
+    left: 55px;
+}
+/*Portfolio style end*/
