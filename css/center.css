@@ -259,23 +259,23 @@
     line-height: 55px;
 }
 .message_item{
+    width: 996px;
+    margin: 0 auto;
+    background: url(/img/form.png) no-repeat center;
+    height: 637px;
+}
+.message_item__container{
     width: 837px;
     margin: 0 auto;
-}
-.message_item__pic{
-    background: url(/img/form.png) no-repeat center;
-    width: 996px;
-}
-.message_form{
-    align-self: center;
+    padding-top: 53px;
 }
 .message_form__container{
     display: flex;
+    padding-bottom: 20px;
 }
 .message_form__wrap{
     border: none;
     padding: 0;
- 
 }
 .name_form{
     display: flex;
@@ -285,31 +285,84 @@
     padding-right: 20px;
 }
 .name_form_field{
+    box-sizing: border-box;
     width: 407px;
     height: 63px;
+    padding: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #000000;
+    outline: none;
+}
+.name_form_field::placeholder{
+    font-size: 16px;
+    line-height: 22px;
+    color: #202117;
+    opacity: 0.7; 
+    padding-left: 20px; 
 }
 .email_form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin: 0;
+    padding: 0;
 }
 .email_form_field{
+    box-sizing: border-box;
     width: 407px;
     height: 63px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #000000;
+    outline: none;
+}
+.email_form_field::placeholder{
+    font-size: 16px;
+    line-height: 22px;
+    color: #202117;
+    opacity: 0.7; 
+    padding-left: 20px;
 }
 .message-form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    margin: 0;
 }
 .message_form_field{
-    width: 837px;
+    box-sizing: border-box;
+    max-width: 837px;
     height: 293px;
+    padding: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #000000;
+    outline: none;
+}
+.message_form_field::placeholder{
+    font-size: 16px;
+    line-height: 22px;
+    color: #202117;
+    opacity: 0.7; 
+    padding-left: 20px;
+    display: flex;
+    justify-content: start;
 }
 .message_button{
     display: flex;
     justify-content: center;
+    padding-top: 20px;
+}
+.send_form_field{
+    width: 224px;
+    height: 46px;
+    border: 1px solid #202117;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #000000;
 }
 
 /*Message style end*/
