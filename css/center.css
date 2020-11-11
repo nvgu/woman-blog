@@ -240,3 +240,76 @@
     margin: 0;
 }
 /*Portfolio style end*/
+
+/*Message style start*/
+
+.message{
+    padding: 55px 222px 30px;
+    width: 996px;
+    margin: 0 auto;
+}
+.message_caption{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 49px;
+}
+.message_caption__title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 55px;
+}
+.message_item{
+    width: 837px;
+    margin: 0 auto;
+}
+.message_item__pic{
+    background: url(/img/form.png) no-repeat center;
+    width: 996px;
+}
+.message_form{
+    align-self: center;
+}
+.message_form__container{
+    display: flex;
+}
+.message_form__wrap{
+    border: none;
+    padding: 0;
+ 
+}
+.name_form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+    padding-right: 20px;
+}
+.name_form_field{
+    width: 407px;
+    height: 63px;
+}
+.email_form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+}
+.email_form_field{
+    width: 407px;
+    height: 63px;
+}
+.message-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.message_form_field{
+    width: 837px;
+    height: 293px;
+}
+.message_button{
+    display: flex;
+    justify-content: center;
+}
+
+/*Message style end*/
