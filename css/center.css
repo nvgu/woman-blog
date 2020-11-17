@@ -1,7 +1,7 @@
 /*Info style start*/
 
 .info_container{
-    width: 1200px;
+    max-width: 1200px;
     padding: 83px 120px 30px;
     margin: 0 auto;
 }
@@ -366,3 +366,8 @@
 }
 
 /*Message style end*/
+@media screen and (max-width: 1279px){
+    .info_container {
+        padding: 50px 60px 30px;
+    }
+}
