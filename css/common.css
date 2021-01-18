@@ -1,12 +1,21 @@
 html {
-    font-family: 'GSpectral SC', 'Open Sans';
-    color: #2E2F22;
-    font-size: 16px;
-    line-height: 26px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1px;
+    height: 100%;
+    box-sizing: border-box;
 }
 label{
     padding-bottom: 12px;
     font-weight: bold;
     font-size: 18px;
     line-height: 28px;
+}
+body{
+    color: #2E2F22;
+    font-size: 16px;
+    line-height: 26px;
+}
+img{
+    max-width: 100%;
+    height: auto;
 }

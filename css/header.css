@@ -2,16 +2,13 @@
 .header{
     position: relative;
 }
-.header_container{
-    min-height: 50vh;
-    background: url(/img/header-img.png) no-repeat center;
-    background-size: cover;
-}
 .wrapper{
+    position: absolute;
     max-width: 1440px;
-    height: 581px;
     margin: 0 auto;
     padding: 0 120px;
+    left: 0;
+    right: 0;
 }
 .header_wrapper_logo{
     padding-top: 4px;
@@ -62,6 +59,9 @@
     height: 2px;
     left: 10px;
 }
+.header_img{
+    width: 100%;
+}
 .header_wrapper__list{
     display: flex;
     margin: 0;
@@ -79,15 +79,11 @@
     padding-right: 0;
 }
 .header_wrapper__item:hover, .header_wrapper__item:focus, .header_wrapper__item:active{
-    text-decoration: underline;
-    opacity: .75;
+    color: #999084;
 }
 /*Header style end*/
 
 @media screen and (max-width: 1279px){
-    .header_container{
-        min-height: 30vh;
-    }
     .wrapper{
         padding: 0 60px;
     }

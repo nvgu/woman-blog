@@ -12,10 +12,15 @@
     margin-bottom: 60px;
 }
 .info_menu__title{
+    font-family: 'Spectral SC';
     margin: 0;
     font-size: 36px;
     line-height: 55px;
     cursor: pointer;
+}
+.info_menu__container{
+    display: flex;
+    position: relative;
 }
 .info_menu__container_button{
     display: flex;
@@ -30,13 +35,15 @@
     border: none;
     outline: none;
     cursor: pointer;
+    appearance: none;
 }
 .info_menu__container_button:hover, .info_menu__container_button:focus, .info_menu__container_button:active{
     background: #c0c0c0;
 }  
 .info_menu__container_icon{
-    padding-left: 33px;
-    padding-right: 13px;
+    position: absolute;
+    top: 15px;
+    right: 19px;
 }
 .info_menu__container_text{
     font-size: 16px;
@@ -55,11 +62,6 @@
 }
 .info_menu__card_lg{
     grid-column: span 3;
-    height: 552px;
-}
-.info_menu__cards_pic{
-    max-width: 100%;
-    height: auto;
 }
 .info_menu__cards_title{
     font-family: Spectral SC;
@@ -80,13 +82,11 @@
     color: rgba(46, 47, 34, 0.7);
 }
 .info_menu__container_down{
-    display: flex;
-    position: absolute;
+  position: relative;
 }
 .info_menu__text_down{
-    width: 430px;
     position: absolute;
-    top: 359px;
+    bottom: 61px;
     left: 82px;
 }
 .info_menu__cards_title__down{
@@ -102,8 +102,8 @@
     color: #ffffff;
 }
 .info_menu__card_down{
-    width: 430px;
-    color: #ffffff;
+    max-width: 430px;
+    color: rgba(255, 255, 255, 0.7);
 }
 .info_button{
     display: flex;
@@ -125,7 +125,7 @@
 
 .annotation{
     padding: 11px 120px 30px;
-    width: 1200px;
+    max-width: 1180px;
     margin: 0 auto;
 }
 .annotation_menu{
@@ -134,6 +134,7 @@
     margin-bottom: 49px;
 }
 .annotation_menu__title{
+    font-family: Spectral SC;
     font-weight: bold;
     font-size: 36px;
     line-height: 55px;
@@ -147,8 +148,8 @@
     margin-left: 40px;
 }
 .annotation_title_top{
-    width: 497px;
-    height: 366px;
+    max-width: 497px;
+    max-height: 366px;
     margin-bottom: 98px;
 }
 .annotation_text{
@@ -165,13 +166,13 @@
     font-size: 30px;
     line-height: 40px;
     margin: 0;
-    width: 550px;
+    max-width: 550px;
     height: 160px;
 }
 .annotation_container__down::before{
     position: absolute;
     content: "";
-    width: 215px;
+    max-width: 215px;
     border-top: 3px solid #D7D1C9;
     transform: rotate(-90deg);
     margin-top: 77px;
@@ -192,6 +193,7 @@
     margin-bottom: 49px;
 }
 .portfolio_caption_title{
+    font-family: Spectral SC;
     font-weight: bold;
     font-size: 36px;
     line-height: 55px;
@@ -230,6 +232,7 @@
     left: 18px;
 }
 .porfolio_item__caption{
+    font-family: Spectral SC;
     font-weight: bold;
     font-size: 20px;
     line-height: 30px;
@@ -238,6 +241,7 @@
     text-align: center;
 }
 .portfolio_item__title{
+    font-family:  Spectral SC;
     margin-top: 0;
     margin-bottom: 17px;
     font-weight: bold;
@@ -263,9 +267,11 @@
     padding-bottom: 49px;
 }
 .message_caption__title{
+    font-family: Spectral SC;
     font-weight: bold;
     font-size: 36px;
     line-height: 55px;
+    margin: 0;
 }
 .message_item{
     width: 996px;
@@ -390,5 +396,17 @@
     .portfolio_caption_title {
         font-size: 30px;
         line-height: 42px;
+    }
+    .annotation{
+        padding: 11px 60px 30px;
+    }
+    .annotation_title {
+        margin-top: 32px;
+    }
+    .annotation_text {
+        margin-bottom: 20px;
+    }
+    .annotation_title_top {
+        margin-bottom: 76px;
     }
 }

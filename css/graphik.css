@@ -1,14 +1,15 @@
+/* spectral-sc-700 - cyrillic */
 @font-face {
-    font-family: 'Spectral SC';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/spectral-sc-v5-cyrillic-700.eot');
-    src: local('Spectral SC Bold'), local('SpectralSC-Bold'),
-         url('../fonts/spectral-sc-v5-cyrillic-700.eot?#iefix') format('embedded-opentype')
-         url('../fonts/spectral-sc-v5-cyrillic-700.woff2') format('woff2'),
-         url('../fonts/spectral-sc-v5-cyrillic-700.woff') format('woff'),
-         url('../fonts/spectral-sc-v5-cyrillic-700.ttf') format('truetype'), 
-         url('../fonts/spectral-sc-v5-cyrillic-700.svg#SpectralSC') format('svg');
+     font-family: 'Spectral SC';
+     font-style: normal;
+     font-weight: 700;
+     src: url('../fonts/spectral-sc-v5-cyrillic-700.eot'); 
+     src: local(''),
+          url('../fonts/spectral-sc-v5-cyrillic-700.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/spectral-sc-v5-cyrillic-700.woff2') format('woff2'), 
+          url('../fonts/spectral-sc-v5-cyrillic-700.woff') format('woff'), 
+          url('../fonts/spectral-sc-v5-cyrillic-700.ttf') format('truetype'), 
+          url('../fonts/spectral-sc-v5-cyrillic-700.svg#SpectralSC') format('svg'); 
 }
 @font-face {
     font-family: 'Open Sans';
