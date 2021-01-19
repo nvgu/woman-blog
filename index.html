@@ -36,191 +36,183 @@
         <img class="header_img" src="./img/header-img.png" alt="Улыбающаяся девушка, стоящая в полоборота на фона города и моря, которые находится внизу">
    </div>
    <main class="main">
-       <section class="info_section">
-           <div class="info">
-               <div class="info_container">
-                   <div class="info_menu">
-                       <h2 class="info_menu__title">Все статьи</h2>
-                       <div class="info_menu__container">
-                            <select class="info_menu__container_button">
-                                <option value="all" celected>Выбрать тему</option>
-                                <option value="travel">Путешествие</option>
-                                <option value="city">Город</option>
-                                <option value="books">Книги</option>
-                                <option value="photo">Фотографии</option>
-                                <option value="recipe">Рецепты</option>
-                                <option value="all">Все статьи</option>
-                            </select>
-                            <svg class="info_menu__container_icon" width="16" height="14" viewBox="0 0 16 14" fill="none"> <path d="M9.6883 12.3416C8.90267 13.5787 7.09733 13.5787 6.3117 12.3416L0.424839 3.07222C-0.420795 1.74069 0.535778 0 2.11314 0L13.8869 0C15.4642 0 16.4208 1.74069 15.5752 3.07221L9.6883 12.3416Z" fill="white"/> </svg>
+        <section class="info_section">
+            <div class="info">
+                <div class="info_container">
+                    <div class="info_menu">
+                        <h2 class="info_menu__title">Все статьи</h2>
+                        <div class="info_menu__container">
+                             <select class="info_menu__container_button">
+                                 <option value="all" celected>Выбрать тему</option>
+                                 <option value="travel">Путешествие</option>
+                                 <option value="city">Город</option>
+                                 <option value="books">Книги</option>
+                                 <option value="photo">Фотографии</option>
+                                 <option value="recipe">Рецепты</option>
+                                 <option value="all">Все статьи</option>
+                             </select>
+                             <svg class="info_menu__container_icon" width="16" height="14" viewBox="0 0 16 14" fill="none"> <path d="M9.6883 12.3416C8.90267 13.5787 7.09733 13.5787 6.3117 12.3416L0.424839 3.07222C-0.420795 1.74069 0.535778 0 2.11314 0L13.8869 0C15.4642 0 16.4208 1.74069 15.5752 3.07221L9.6883 12.3416Z" fill="white"/> </svg>
+                         </div>
+                    </div>
+                    <div class="info_menu__cards">
+                        <div class="info_menu__card info_menu__card_sm">
+                            <img class="info_menu__cards_pic info_menu__cards_pic-sm" src="./img/card-1.png" alt="Путешествие в Берлин в августе">
+                            <h3 class="info_menu__cards_title">Путешествие в Берлин в августе</h3>
+                            <p class="info_menu__cards_desc">Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!</p>
+                            <div class="info_menu__cards_down">
+                                <span class="info_menu_tag">Теги: путешествия</span>
+                                <time datetime="2020-09-29">29.09.2020</time>
+                            </div>
                         </div>
-                   </div>
-                   <div class="info_menu__cards">
-                       <div class="info_menu__card info_menu__card_sm">
-                           <img class="info_menu__cards_pic" src="./img/card-1.png" alt="Путешествие в Берлин в августе">
-                           <h3 class="info_menu__cards_title">Путешествие в Берлин в августе</h3>
-                           <p class="info_menu__cards_desc">Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!</p>
-                           <div class="info_menu__cards_down">
-                               <span class="info_menu_tag">Теги: путешествия</span>
-                               <time datetime="29.09.2020">29.09.2020</time>
-                           </div>
-                       </div>
-                       <div class="info_menu__card info_menu__card_sm">
-                           <img class="info_menu__cards_pic" src="./img/card-2.png" alt="Колдбрю">
-                           <h3 class="info_menu__cards_title">Где выпить колдбрю в Москве </h3>
-                           <p class="info_menu__cards_desc">Собрала для вас список любимых кофеен, где подают лучший летний напиток.</p>
-                           <div class="info_menu__cards_down">
-                               <span class="info_menu_tag">Теги: город</span>
-                               <time datetime="29.09.2020">24.07.2020</time>
-                           </div>
-                       </div>
-                       <div class="info_menu__card info_menu__card_sm">
-                           <img class="info_menu__cards_pic" src="./img/card-3.png" alt="Стопка книг">
-                           <h3 class="info_menu__cards_title">Прочитано: книжные рекомендации</h3>
-                           <p class="info_menu__cards_desc">Рассказываю о прочитанных за последнее время книгах: фавориты и провалы.</p>
-                           <div class="info_menu__cards_down">
-                               <span class="info_menu_tag">Теги: книги</span>
-                               <time datetime="29.09.2020">15.07.2020</time>
-                           </div>
-                       </div>
-                       <div class="info_menu__card info_menu__card_lg">
-                           <div class="info_menu__container_down">
-                               <img class="info_menu__cards_pic" src="./img/card-4.png" alt="Розы">
-                               <div class="info_menu__text_down">
-                                   <h3 class="info_menu__cards_title info_menu__cards_title__down">Снимки на пленку</h3>
-                                   <p class="info_menu__cards_desc info_menu__cards_desc__down">Поделилась с вами весенними фотографиями, и секретами удачных снимков.</p>
-                                   <div class="info_menu__cards_down info_menu__card_down">
-                                       <span class="info_menu_tag">Теги: фотографии</span>
-                                       <time datetime="29.09.2020">29.06.2020</time>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="info_menu__card info_menu__card_lg">
-                           <div class="info_menu__container_down">
-                               <img class="info_menu__cards_pic" src="./img/card-5.png" alt="Домашний чизкейк">
-                               <div class="info_menu__text_down">
-                                   <h3 class="info_menu__cards_title info_menu__cards_title__down">Домашний чизкейк </h3>
-                                   <p class="info_menu__cards_desc info_menu__cards_desc__down">Что может быть лучше чизкейка с сезонными ягодами? Только домашний чизкейк!</p>
-                                   <div class="info_menu__cards_down info_menu__card_down">
-                                       <span class="info_menu_tag">Теги: рецепты</span>
-                                       <time datetime="29.09.2020">24.06.2020</time>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div class="info_button">
-                       <button class="info_button__down">Показать еще</button>
-                   </div>
-               </div>
-           </div>
-       </section>
-       <section class="annotation_section">
-           <div class="annotation">
-               <div class="annotation_wrapper">
-                   <div class="annotation_menu">
-                       <h3 class="annotation_menu__title">Обо мне</h3>
-                   </div>
-                   <div class="annotation_container">
-                       <div class="annotation_container__pic">
-                           <img class="annotation_pic" src="./img/woman.png" alt="Девушка">
-                       </div>
-                       <div class="annotation_title">
-                           <div class="annotation_title_top">
-                               <p class="annotation_text">
-                                   Всем привет! Меня зовут Аня, и это мой личный блог.
-                                   Здесь ты найдёшь рассказы о моих путешествиях, снимки
-                                   на плёнку, рецепты, обзоры на книги. В общем, тексты о том,
-                                   что мне инетресно.
-                               </p>
-                               <p class="annotaion_text">
-                                   Я работаю копирайтером, поэтому мой блоге — это ещё и моё
-                                   портфолио. Ниже размещены несколько моих лучших
-                                   рабочих текстов. Буду рада новым сотрудничествам! 
-                               </p>
-                               <p class="annotation_text">
-                                   Если вы хотите написать мне — это можно сделать в соцсетях
-                                   или через <ins>форму</ins>. Всегда приятно услышать обратную связь
-                                   от читателей и познакомиться поближе.
-                               </p>
-                               <p class="annotation_text">Приятного чтения!</p>
-                           </div>
-                           <div class="annotation_container__down">
-                               <p class="annotation_text__down">
-                                   Я верю, что каждый раз пробуя новое, выходящее за зону 
-                                   моего комфорта, я действительно узнаю настояющую себя. 
-                               </p>
-                           </div>
-                       </div>    
-                   </div>
-               </div>
-           </div>
-       </section>
-       <section class="portfolio_section">
-           <div class="portfolio">
-               <div class="portfolio_caption">
-                   <h3 class="portfolio_caption_title">Портфолио</h3>
-               </div>
-               <div class="portfolio_item">
-                   <div class="portfolio_item__container">
-                       <div class="portfolio_container__pic">
-                           <img class="portfolio_pic" src="./img/pic-1.png" alt="">
-                       </div>
-                       <div class="portfolio_container_title portfolio_item__сontent_right">
-                           <h4 class="porfolio_item__caption">Блог HTML Academy</h4>
-                           <h5 class="portfolio_item__title">«Как учиться продуктивно»</h5>
-                           <p class="portfolio_item_desc">Про основные методы обучения, которые помогут быстро и надолго запомнить информацию.</p>
-                       </div>    
-                   </div>
-                   <div class="portfolio_item__container">
-                       <div class="portfolio_container__pic">
-                           <img class="portfolio_pic" src="./img/pic-2.png" alt="">
-                       </div>
-                       <div class="portfolio_container_title portfolio_item__сontent_center">
-                           <h4 class="porfolio_item__caption">Журнал «LNK»</h4>
-                           <h5 class="portfolio_item__title">«Зачем поцели нужны человеку? <br>И какие они бывают»</h5>
-                           <p class="portfolio_item_desc">Поцелуи — повсеместная ежедневная практика. Но зачем люди целуются? Какие смысли вкладывают в этот ритуал? И где корни этой практики?</p>
-                       </div>
-                   </div>
-                   <div class="portfolio_item__container">
-                       <div class="portfolio_container__pic">
-                           <img class="portfolio_pic" src="./img/pic-3.png" alt="">
-                       </div>
-                       <div class="portfolio_container_title portfolio_item__content_left">
-                           <h4 class="porfolio_item__caption">Журнал «Т — Л»</h4>
-                           <h5 class="portfolio_item__title">«Советы по эффективной <br>удалённой работе»</h5>
-                           <p class="portfolio_item_desc">Поделилась лайфхаками, которые помогают мне работать продуктивно из дома. </p>
-                       </div>
-                   </div>
-               </div>
-               <div class="info_button">
-                   <button class="info_button__down">ПОКАЗАТЬ ЕЩЕ</button>
-               </div>
-           </div>
-       </section>
-       <section class="message_section">
-           <div class="message">
-               <div class="message_caption">
-                   <h3 class="message_caption__title">Написать мне</h3>
-               </div>
-               <div class="message_item">
-                   <div class="message_item__container">
-                       <form class="message_form" action="">
-                           <fieldset class="message_form__wrap">
-                               <div class="message_form__container">
-                                   <p class="name_form"><label for="name">Ваше имя</label> <textarea name="user-name" type="text" class="name_form_field" placeholder="Иван Иванов"></textarea></p>
-                                   <p class="email_form"><label for="email">Email</label> <textarea name="user-email" type="email" class="email_form_field" placeholder="google@gmail.com"></textarea></p>
-                               </div>
-                               <p class="message-form"><label for="message">Сообщение</label> <textarea name="message-name" type="text" class="message_form_field" placeholder="Напишите здесь ваше сообщение."></textarea></p>
-                           </fieldset>
-                           <div class="message_button">
-                               <p class="send-form"><input type="submit" value="Отправить" class="send_form_field"></p>
-                           </div>
-                       </form>
-                   </div>
-               </div>
-           </div>
-       </section>
+                        <div class="info_menu__card info_menu__card_sm">
+                            <img class="info_menu__cards_pic info_menu__cards_pic-sm" src="./img/card-2.png" alt="Колдбрю">
+                            <h3 class="info_menu__cards_title">Где выпить колдбрю в Москве </h3>
+                            <p class="info_menu__cards_desc">Собрала для вас список любимых кофеен, где подают лучший летний напиток.</p>
+                            <div class="info_menu__cards_down">
+                                <span class="info_menu_tag">Теги: город</span>
+                                <time datetime="2020-07-24">24.07.2020</time>
+                            </div>
+                        </div>
+                        <div class="info_menu__card info_menu__card_sm">
+                            <img class="info_menu__cards_pic info_menu__cards_pic-sm" src="./img/card-3.png" alt="Стопка книг">
+                            <h3 class="info_menu__cards_title">Прочитано: книжные рекомендации</h3>
+                            <p class="info_menu__cards_desc">Рассказываю о прочитанных за последнее время книгах: фавориты и провалы.</p>
+                            <div class="info_menu__cards_down">
+                                <span class="info_menu_tag">Теги: книги</span>
+                                <time datetime="2020-07-15">15.07.2020</time>
+                            </div>
+                        </div>
+                        <div class="info_menu__card info_menu__card_lg">
+                            <img class="info_menu__cards_pic info_menu__cards_pic-lg" src="./img/card-4.png" alt="Розы">
+                            <h3 class="info_menu__cards_title info_menu__cards_title__down">Снимки на пленку</h3>
+                            <p class="info_menu__cards_desc info_menu__cards_desc__down">Поделилась с вами весенними фотографиями, и секретами удачных снимков.</p>
+                            <div class="info_menu__cards_down info_menu__card_down">
+                                <span class="info_menu_tag">Теги: фотографии</span>
+                                <time datetime="2020-06-29">29.06.2020</time>
+                            </div>
+                        </div>
+                        <div class="info_menu__card info_menu__card_lg">
+                            <img class="info_menu__cards_pic info_menu__cards_pic-lg" src="./img/card-5.png" alt="Домашний чизкейк">
+                            <h3 class="info_menu__cards_title info_menu__cards_title__down">Домашний чизкейк </h3>
+                            <p class="info_menu__cards_desc info_menu__cards_desc__down">Что может быть лучше чизкейка с сезонными ягодами? Только домашний чизкейк!</p>
+                            <div class="info_menu__cards_down info_menu__card_down">
+                                <span class="info_menu_tag">Теги: рецепты</span>
+                                <time datetime="2020-06-24">24.06.2020</time>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_button">
+                        <button class="info_button__down">Показать еще</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="annotation_section">
+            <div class="annotation">
+                <div class="annotation_wrapper">
+                    <div class="annotation_menu">
+                        <h3 class="annotation_menu__title">Обо мне</h3>
+                    </div>
+                    <div class="annotation_container">
+                        <div class="annotation_container__pic">
+                            <img class="annotation_pic" src="./img/woman.png" alt="Девушка">
+                        </div>
+                        <div class="annotation_title">
+                            <div class="annotation_title_top">
+                                <p class="annotation_text">
+                                    Всем привет! Меня зовут Аня, и это мой личный блог.
+                                    Здесь ты найдёшь рассказы о моих путешествиях, снимки
+                                    на плёнку, рецепты, обзоры на книги. В общем, тексты о том,
+                                    что мне инетресно.
+                                </p>
+                                <p class="annotaion_text">
+                                    Я работаю копирайтером, поэтому мой блоге — это ещё и моё
+                                    портфолио. Ниже размещены несколько моих лучших
+                                    рабочих текстов. Буду рада новым сотрудничествам! 
+                                </p>
+                                <p class="annotation_text">
+                                    Если вы хотите написать мне — это можно сделать в соцсетях
+                                    или через <ins>форму</ins>. Всегда приятно услышать обратную связь
+                                    от читателей и познакомиться поближе.
+                                </p>
+                                <p class="annotation_text">Приятного чтения!</p>
+                            </div>
+                            <div class="annotation_container__down">
+                                <p class="annotation_text__down">
+                                    Я верю, что каждый раз пробуя новое, выходящее за зону 
+                                    моего комфорта, я действительно узнаю настояющую себя. 
+                                </p>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio_section">
+            <div class="portfolio">
+                <div class="portfolio_caption">
+                    <h3 class="portfolio_caption_title">Портфолио</h3>
+                </div>
+                <div class="portfolio_item">
+                    <div class="portfolio_item__container">
+                        <div class="portfolio_container__pic">
+                            <img class="portfolio_pic" src="./img/pic-1.png" alt="">
+                        </div>
+                        <div class="portfolio_container_title portfolio_item__сontent_right">
+                            <h4 class="porfolio_item__caption">Блог HTML Academy</h4>
+                            <h5 class="portfolio_item__title">«Как учиться продуктивно»</h5>
+                            <p class="portfolio_item_desc">Про основные методы обучения, которые помогут быстро и надолго запомнить информацию.</p>
+                        </div>    
+                    </div>
+                    <div class="portfolio_item__container">
+                        <div class="portfolio_container__pic">
+                            <img class="portfolio_pic" src="./img/pic-2.png" alt="">
+                        </div>
+                        <div class="portfolio_container_title portfolio_item__сontent_center">
+                            <h4 class="porfolio_item__caption">Журнал «LNK»</h4>
+                            <h5 class="portfolio_item__title">«Зачем поцели нужны человеку? <br>И какие они бывают»</h5>
+                            <p class="portfolio_item_desc">Поцелуи — повсеместная ежедневная практика. Но зачем люди целуются? Какие смысли вкладывают в этот ритуал? И где корни этой практики?</p>
+                        </div>
+                    </div>
+                    <div class="portfolio_item__container">
+                        <div class="portfolio_container__pic">
+                            <img class="portfolio_pic" src="./img/pic-3.png" alt="">
+                        </div>
+                        <div class="portfolio_container_title portfolio_item__content_left">
+                            <h4 class="porfolio_item__caption">Журнал «Т — Л»</h4>
+                            <h5 class="portfolio_item__title">«Советы по эффективной <br>удалённой работе»</h5>
+                            <p class="portfolio_item_desc">Поделилась лайфхаками, которые помогают мне работать продуктивно из дома. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_button">
+                    <button class="info_button__down">ПОКАЗАТЬ ЕЩЕ</button>
+                </div>
+            </div>
+        </section>
+        <section class="message_section">
+            <div class="message">
+                <div class="message_caption">
+                    <h3 class="message_caption__title">Написать мне</h3>
+                </div>
+                <div class="message_item">
+                    <div class="message_item__container">
+                        <form class="message_form" action="">
+                            <fieldset class="message_form__wrap">
+                                <div class="message_form__container">
+                                    <p class="name_form"><label for="name">Ваше имя</label> <textarea name="user-name" type="text" class="name_form_field" placeholder="Иван Иванов"></textarea></p>
+                                    <p class="email_form"><label for="email">Email</label> <textarea name="user-email" type="email" class="email_form_field" placeholder="google@gmail.com"></textarea></p>
+                                </div>
+                                <p class="message-form"><label for="message">Сообщение</label> <textarea name="message-name" type="text" class="message_form_field" placeholder="Напишите здесь ваше сообщение."></textarea></p>
+                            </fieldset>
+                            <div class="message_button">
+                                <p class="send-form"><input type="submit" value="Отправить" class="send_form_field"></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>   
    </main>
    <footer class="footer">
        <div class="footer_item">
