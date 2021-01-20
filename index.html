@@ -66,7 +66,7 @@
                         </div>
                         <div class="info_menu__card info_menu__card_sm">
                             <img class="info_menu__cards_pic info_menu__cards_pic-sm" src="./img/card-2.png" alt="Колдбрю">
-                            <h3 class="info_menu__cards_title">Где выпить колдбрю в Москве </h3>
+                            <h3 class="info_menu__cards_title info_menu__cards__title_center">Где выпить колдбрю в Москве </h3>
                             <p class="info_menu__cards_desc">Собрала для вас список любимых кофеен, где подают лучший летний напиток.</p>
                             <div class="info_menu__cards_down">
                                 <span class="info_menu_tag">Теги: город</span>
@@ -102,7 +102,9 @@
                         </div>
                     </div>
                     <div class="info_button">
-                        <button class="info_button__down">Показать еще</button>
+                        <a href="#!" class="info_button__link">
+                            <button class="info_button__down">Показать еще</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -137,12 +139,10 @@
                                 </p>
                                 <p class="annotation_text">Приятного чтения!</p>
                             </div>
-                            <div class="annotation_container__down">
-                                <p class="annotation_text__down">
+                            <blockquote class="annotation_text__down">
                                     Я верю, что каждый раз пробуя новое, выходящее за зону 
                                     моего комфорта, я действительно узнаю настояющую себя. 
-                                </p>
-                            </div>
+                            </blockquote>
                         </div>    
                     </div>
                 </div>
@@ -169,7 +169,7 @@
                             <img class="portfolio_pic" src="./img/pic-2.png" alt="">
                         </div>
                         <div class="portfolio_container_title portfolio_item__сontent_center">
-                            <h4 class="porfolio_item__caption">Журнал «LNK»</h4>
+                            <h4 class="porfolio_item__caption porfolio_item__caption_center">Журнал «LNK»</h4>
                             <h5 class="portfolio_item__title">«Зачем поцели нужны человеку? <br>И какие они бывают»</h5>
                             <p class="portfolio_item_desc">Поцелуи — повсеместная ежедневная практика. Но зачем люди целуются? Какие смысли вкладывают в этот ритуал? И где корни этой практики?</p>
                         </div>
@@ -200,13 +200,13 @@
                         <form class="message_form" action="">
                             <fieldset class="message_form__wrap">
                                 <div class="message_form__container">
-                                    <p class="name_form"><label for="name">Ваше имя</label> <textarea name="user-name" type="text" class="name_form_field" placeholder="Иван Иванов"></textarea></p>
-                                    <p class="email_form"><label for="email">Email</label> <textarea name="user-email" type="email" class="email_form_field" placeholder="google@gmail.com"></textarea></p>
+                                    <p class="name_form"><label for="name">Ваше имя</label> <textarea name="user-name" type="text" class="name_form_field" required placeholder="Иван Иванов"></textarea></p>
+                                    <p class="email_form"><label for="email">Email</label> <textarea name="user-email" type="email" class="email_form_field"  required placeholder="google@gmail.com"></textarea></p>
                                 </div>
-                                <p class="message-form"><label for="message">Сообщение</label> <textarea name="message-name" type="text" class="message_form_field" placeholder="Напишите здесь ваше сообщение."></textarea></p>
+                                <p class="message-form"><label for="message">Сообщение</label> <textarea name="message-name" type="text" class="message_form_field warning" required placeholder="Напишите здесь ваше сообщение."></textarea></p>
                             </fieldset>
                             <div class="message_button">
-                                <p class="send-form"><input type="submit" value="Отправить" class="send_form_field"></p>
+                                <button type="submit" class="info_button__down">ОТПРАВИТЬ</button>
                             </div>
                         </form>
                     </div>
@@ -216,14 +216,13 @@
    </main>
    <footer class="footer">
        <div class="footer_item">
-           <div class="footer_item__container">
                <ul class="footer_item__nav_list">
                    <li class="footer_item_list__item">ВК</li>  
                    <li class="footer_item_list__item">Телеграм</li>
                    <li class="footer_item_list__item">Инстаграм</li>
                    <li class="footer_item_list__item">Твиттер</li>
                </ul>
-           </div>
+
        </div>
    </footer>
 </body>

@@ -2,21 +2,16 @@
 .footer{
     background: #D7D1C9;
 }
-.footer_item{
+.footer_item{ 
     box-sizing: border-box;
-    width: 538px;
-    margin: 0 auto;
-    padding: 0 405px;
-    width: 1440px;
-    
+    max-width: 1200px;   
+    padding:  65px 20px 20px;
     height: 181px;
     margin: 0 auto;
 }
-.footer_item__container{
-    padding-top: 65px;
-}
 .footer_item__nav_list{
     display: flex;
+    justify-content: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -26,6 +21,10 @@
 .footer_item_list__item{
     list-style-type: none;
     padding-right: 120px;
+    cursor: pointer;
+}
+.footer_item_list__item:hover{
+    color: #999084;
 }
 .footer_item_list__item:last-child{
     padding-right: 0;
