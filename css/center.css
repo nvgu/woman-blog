@@ -23,9 +23,7 @@
     position: relative;
 }
 .info_menu__container_button{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     box-sizing: border-box;
     width: 203px;
     height: 46px;
@@ -56,6 +54,10 @@
     grid-template-columns: repeat(6, 1fr);
     column-gap: 20px;
     row-gap: 62px;
+}
+.info_menu__card{
+    display: flex;
+    flex-direction: column;
 }
 .info_menu__card_sm{
     grid-column: span 2;
@@ -154,7 +156,7 @@
 
 .annotation{
     padding: 11px 20px 30px;
-    max-width: 1180px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 .annotation_menu{
@@ -429,7 +431,7 @@
     border: 1px solid #000000;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1279px){
     .info_container{
         padding-top: 45px;
         padding-bottom: 30px;
@@ -491,8 +493,184 @@
         padding-top: 20px;
         padding-bottom: 45px;
     }
-    .footer_item {
-        height: 140px;
+}
+@media screen and (max-width: 1023px){
+    .info_container {
+        padding: 25px 15px 20px 15px;
     }
-    
+    .info_menu__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .info_menu__title{
+        padding-top: 7px;
+    }
+    .info_menu__container_button {
+        width: 150px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 85%;
+    }
+    .info_menu__container_icon{
+        width: 12px;
+        height: 12px;
+        top: 15px;
+    }
+    .info_menu {
+        margin-bottom: 30px;
+    }
+    .info_menu__cards {
+        column-gap: 10px;
+        row-gap: 32px;
+    }
+    .info_menu__cards_title {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 15px 0 4px;
+    }
+    .info_menu__cards_desc {
+        padding-bottom: 6px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .info_menu__cards_down {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .info_menu__card_lg {
+        min-height: 335px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 31px;
+    }
+    .info_button {
+        margin-top: 30px;
+    }
+    .info_button__down {
+        width: 165px;
+        height: 40px;
+        font-size: 85%;
+    }
+    .annotation {
+        padding: 5px 15px 15px;    
+    }   
+    .annotation_menu {
+        margin-bottom: 20px;
+    }
+    .annotation_menu__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .annotation_title {
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    .annotation_title_top {
+        margin-bottom: 35px;
+    }
+    .annotation_text {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+    .annotation_text__down {
+        font-size: 18px;
+        line-height: 25px;
+        max-width: 350px;
+        height: auto;
+    }
+    .annotation_text__down::before {
+        height: calc(100% + 30px);
+        top: -9px;
+    }
+    .portfolio {
+        padding: 5px 15px 15px;    
+    }
+    .portfolio_caption_title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .portfolio_caption {
+        margin-bottom: 20px;
+    }
+    .portfolio_item {
+        column-gap: 5px;
+    }
+    .portfolio_item__container {
+        min-height: 325px;
+    }
+    .porfolio_item__caption {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+    .portfolio_container_title {
+        top: 80px;
+        left: 0;
+    }
+    .portfolio_item__title {
+        margin-bottom: 13px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .portfolio_item_desc {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 0 10px;
+    }
+    .message {
+        padding: 10px 35px 25px;
+    }
+    .message_caption {
+        padding-bottom: 20px;
+    }
+    .message_caption__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .message_item {
+        max-width: 996px;
+        height: auto;
+    }
+    .message_item__container {
+        padding: 30px;
+    }
+    label{
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+@media screen and (max-width: 767px){
+    .info_container {
+        padding: 15px 5px 10px 5px;
+    }
+    .info_menu {
+        margin-bottom: 10px;
+    }
+    .info_menu__title {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .info_menu__container_button {
+        width: 80px;
+        height: 20px;
+        padding-left: 5px;
+        font-size: 45%;
+        border-radius: 5px;
+    }
+    .info_menu__container_icon {
+        width: 7px;
+        height: 7px;
+        top: 6px;
+        right: 7px;
+    }
+    .info_menu__cards {
+        margin: 0 auto;
+    }
+    .info_menu__card_sm {
+        grid-column: span 6;
+    }
+    .info_menu__card_lg {
+        grid-column: span 6;
+    }
 }
