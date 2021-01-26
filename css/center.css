@@ -8,6 +8,7 @@
 .info_menu{
     display: flex;
     margin: 0 auto;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
 }
@@ -74,6 +75,7 @@
     flex-direction: column;
     justify-content: flex-end;
     cursor: pointer;
+    overflow: hidden;
 }
 .info_menu__cards_pic{
     cursor: pointer;
@@ -236,38 +238,27 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
-    box-sizing: border-box;
 }
 .portfolio_item__container{
     position: relative;
     min-height: 525px;
     cursor: pointer;
-}
-.portfolio_container__pic{
+    overflow: hidden;
+    box-sizing: border-box;
     display: flex;
-    position: absolute;
-}
-.portfolio_pic:hover{
-    transform: scale(1.05);
-    transition: all 0.5s ease;
+    flex-direction: column;
+    justify-content: center;
 }
 .portfolio_container_title{
     position: absolute;
-    top: 140px;
+    top: 0;
+    left: 0;
     text-align: center;
-}
-.portfolio_item__сontent_right{
-    left: 52px;
-    max-width: 284px;
+    box-sizing: border-box;
+    padding: 140px 25px;
 }
 .portfolio_item__сontent_center{
-    left: 31px;
-    max-width: 336px;
     color: #ffffff;
-}
-.portfolio_item__content_left{
-    max-width: 351px;
-    left: 18px;
 }
 .porfolio_item__caption{
     font-family: Spectral SC;
@@ -471,23 +462,14 @@
     .portfolio {
         padding-top: 20px;
     }
-    .portfolio_item__сontent_right {
-        left: 15px;
+    .portfolio_container_title{
+        padding: 70px 25px;
     }
     .portfolio_item__container {
         min-height: 421px;
     }
-    .portfolio_container_title {
-        top: 100px;
-    }
-    .portfolio_item__сontent_center {
-        left: 0;
-    }
     .porfolio_item__caption_center{
         margin-bottom: 24px;
-    }
-    .portfolio_item__content_left {
-        left: 0;
     }
     .message {
         padding-top: 20px;
@@ -569,7 +551,7 @@
         margin-bottom: 35px;
     }
     .annotation_text {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 18px;
         margin-bottom: 15px;
     }
@@ -605,8 +587,7 @@
         margin-bottom: 15px;
     }
     .portfolio_container_title {
-        top: 80px;
-        left: 0;
+        padding: 75px 15px;
     }
     .portfolio_item__title {
         margin-bottom: 13px;
@@ -614,9 +595,8 @@
         line-height: 18px;
     }
     .portfolio_item_desc {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 16px;
-        padding: 0 10px;
     }
     .message {
         padding: 10px 35px 25px;
@@ -629,48 +609,173 @@
         line-height: 30px;
     }
     .message_item {
-        max-width: 996px;
         height: auto;
     }
     .message_item__container {
         padding: 30px;
     }
-    label{
-        font-size: 12px;
-        line-height: 20px;
-    }
 }
 @media screen and (max-width: 767px){
     .info_container {
-        padding: 15px 5px 10px 5px;
+        padding: 15px 15px 10px 15px;
     }
     .info_menu {
         margin-bottom: 10px;
     }
-    .info_menu__title {
-        font-size: 15px;
-        line-height: 20px;
+    .info_menu__container{
+        align-items: center;
     }
     .info_menu__container_button {
-        width: 80px;
-        height: 20px;
+        width: 100px;
+        height: 25px;
         padding-left: 5px;
-        font-size: 45%;
+        font-size: 60%;
         border-radius: 5px;
     }
     .info_menu__container_icon {
-        width: 7px;
+        width: 9px;
         height: 7px;
-        top: 6px;
+        top: 9px;
         right: 7px;
     }
     .info_menu__cards {
-        margin: 0 auto;
+        column-gap: 5px;
+        row-gap: 10px;
+    }
+    .info_menu__card::after{
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(21,24,36,.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
     }
     .info_menu__card_sm {
+        box-sizing: border-box;
         grid-column: span 6;
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 31px;
+        justify-content: flex-end;
+        border-radius: 5px;
     }
     .info_menu__card_lg {
         grid-column: span 6;
+        overflow: hidden;
+        min-height: 200px;
+        border-radius: 5px;
+    }
+    .info_menu__cards_pic-sm {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 268px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .info_menu__cards_pic-lg {
+        height: 375px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .info_menu__cards_title{
+        color: #ffffff;
+        z-index: 3;
+    }
+    .info_menu__cards_desc{
+        color: #ffffff;
+        z-index: 3;
+    }
+    .info_menu__cards_down{
+        color: #ffffff;
+        z-index: 3;
+        max-width: 100%;
+    }
+    .info_menu__cards_title{
+        font-size: 14px;
+        line-height: 15px;
+        padding: 15px 0 4px;
+    }
+    .annotation_container {
+        display: block;
+    }
+    .annotation_pic{
+        width: 100%;
+    }
+    .annotation_title{
+        margin-left: 0;
+    }
+    .annotation_title_top{
+        max-width: 100%;
+    }
+    .annotation_text__down{
+        max-width: 100%;
+    }
+    .portfolio_item{
+        row-gap: 10px;
+    }
+    .portfolio_item__container{
+        grid-column: span 3;
+        min-height: 200px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 31px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .portfolio_pic{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .portfolio_container_title {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        top: 0
+    }
+    .portfolio_container_title {
+        padding: 25px;
+    }
+    .portfolio_item__title{
+        margin-bottom: 7px;
+    }
+    .porfolio_item__caption {
+        margin-bottom: 7px;
+    }
+    .message_form__container {
+        flex-direction: column;
+    }
+    .message{
+        padding: 5px 15px 15px;
+    }
+    .message_item__container {
+        padding: 10px;
+    }
+    .message_form__container {
+        padding-bottom: 10px;
+    }
+    .name_form {
+        padding: 0 0 10px;
+        width: 100%;
+    }
+    .email_form {
+        padding: 0;
+        width: 100%;
     }
 }
