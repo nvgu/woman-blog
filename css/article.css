@@ -83,7 +83,6 @@
 .comments_item{
     background: #ECE1E1;
     border-radius: 10px;
-    padding: 0;
     margin: 0;
     padding: 44px 80px 36px 100px;
 }
@@ -113,7 +112,7 @@
 .comments_form{
     max-width: 793px;
     box-sizing: border-box;
-    padding: 77px 0 81px 64px;
+    padding: 77px 0 81px 81px;
 }
 .comments_form__fieldset{
      border: none;
@@ -127,24 +126,30 @@
     margin-bottom: 70px;
 }
 .comments_form__input{
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .comments_items__input_section{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 .comments_form_input_container{
     display: flex;
     flex-direction: column;
-    max-width: 220px;
+    width: 30%;
+    max-height: 125px;
     margin: 0;
+    padding-right: 13%;
+    padding-bottom: 40px;
 }
 .comments_item__label{
     font-size: 16px;
     line-height: 22px;
     font-weight: normal;
-    padding-bottom: 18px;
     font-family: inherit;
+    padding: 0;
 }
 .name_form_field{
     font-size: 16px;
@@ -152,7 +157,6 @@
     border: none;
     border-bottom: 1px solid #2E2F22;
     outline: none;
-    width: 100%;
     margin-bottom: 30px;
 }
 .email_form_field{
@@ -161,8 +165,65 @@
     border: none;
     border-bottom: 1px solid #2E2F22;
     outline: none;
-    width: 100%;
 }
 .comments_form_input_field{
     display: flex;
+    width: 57%;
+    min-height: 208px;
+    margin: 0;
+}
+.message_form_field{
+    resize: none;
+    width: 100%;
+    max-height: 208px;
+    margin: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.comments_form__input_button{
+    display: flex;
+    margin-top: -45px;
+    width: 31%;
+}
+.comments_form__button{
+    width: 100%;
+    min-height: 46px;
+    border-radius: 10px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 1px solid #202117;
+}
+@media screen and (max-width: 767px){
+    .article_wrapper {
+        padding-top: 40px;
+    }
+    .article_menu {
+        margin-bottom: 20px;
+    }
+    .article_link_all__span {
+        font-size: 30px;
+    }
+    .comments_item {
+        padding: 10px; 
+    }
+    .comments_form {
+        padding: 35px 10px 46px 10px;
+    }
+    .comments_items__input_section{
+        flex-direction: column;
+    }
+    .comments_form_input_container {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+    .comments_form_input_field {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .comments_form__input_button {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
