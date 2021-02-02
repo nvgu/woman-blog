@@ -63,7 +63,7 @@
                          </div>
                     </div>
                     <div class="info_menu__cards">
-                        <div class="info_menu__card info_menu__card_sm">
+                        <div class="info_menu__card info_menu__card_sm" data-category="travel">
                             <img class="info_menu__cards_pic info_menu__cards_pic-sm" src="./img/card-1.png" alt="Путешествие в Берлин в августе">
                             <h3 class="info_menu__cards_title">Путешествие в Берлин в августе</h3>
                             <p class="info_menu__cards_desc">Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!</p>
@@ -73,7 +73,7 @@
                             </div>
                             <a href="article.html" class="info_menu__card_link"></a>
                         </div>
-                        <div class="info_menu__card info_menu__card_sm">
+                        <div class="info_menu__card info_menu__card_sm" data-category="city">
                             <img class="info_menu__cards_pic info_menu__cards_pic-sm" src="./img/card-2.png" alt="Колдбрю">
                             <h3 class="info_menu__cards_title info_menu__cards__title_center">Где выпить колдбрю в Москве </h3>
                             <p class="info_menu__cards_desc">Собрала для вас список любимых кофеен, где подают лучший летний напиток.</p>
@@ -83,7 +83,7 @@
                             </div>
                             <a href="article.html" class="info_menu__card_link"></a>
                         </div>
-                        <div class="info_menu__card info_menu__card_sm">
+                        <div class="info_menu__card info_menu__card_sm" data-category="books">
                             <img class="info_menu__cards_pic info_menu__cards_pic-sm" src="./img/card-3.png" alt="Стопка книг">
                             <h3 class="info_menu__cards_title">Прочитано: книжные рекомендации</h3>
                             <p class="info_menu__cards_desc">Рассказываю о прочитанных за последнее время книгах: фавориты и провалы.</p>
@@ -93,7 +93,7 @@
                             </div>
                             <a href="article.html" class="info_menu__card_link"></a>
                         </div>
-                        <div class="info_menu__card info_menu__card_lg">
+                        <div class="info_menu__card info_menu__card_lg" data-category="photo">
                             <img class="info_menu__cards_pic info_menu__cards_pic-lg" src="./img/card-4.png" alt="Розы">
                             <h3 class="info_menu__cards_title info_menu__cards_title__down">Снимки на пленку</h3>
                             <p class="info_menu__cards_desc info_menu__cards_desc__down">Поделилась с вами весенними фотографиями, и секретами удачных снимков.</p>
@@ -103,7 +103,7 @@
                             </div>
                             <a href="article.html" class="info_menu__card_link"></a>
                         </div>
-                        <div class="info_menu__card info_menu__card_lg">
+                        <div class="info_menu__card info_menu__card_lg" data-category="recipe">
                             <img class="info_menu__cards_pic info_menu__cards_pic-lg" src="./img/card-5.png" alt="Домашний чизкейк">
                             <h3 class="info_menu__cards_title info_menu__cards_title__down">Домашний чизкейк </h3>
                             <p class="info_menu__cards_desc info_menu__cards_desc__down">Что может быть лучше чизкейка с сезонными ягодами? Только домашний чизкейк!</p>
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                     <div class="info_button">
-                        <a href="#!" class="info_button__link">
+                        <a href="article.html" class="info_button__link">
                             <button class="info_button__down">Показать еще</button>
                         </a>
                     </div>
@@ -193,7 +193,9 @@
                     </div>
                 </div>
                 <div class="info_button">
-                    <button class="info_button__down">ПОКАЗАТЬ ЕЩЕ</button>
+                    <a href="article.html" class="info_button__link">
+                        <button class="info_button__down">ПОКАЗАТЬ ЕЩЕ</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -204,13 +206,13 @@
                 </div>
                 <div class="message_item">
                     <div class="message_item__container">
-                        <form class="message_form" action="">
+                        <form class="message_form" method="POST" action="#">
                             <fieldset class="message_form__wrap">
                                 <div class="message_form__container">
-                                    <p class="name_form"><label for="name">Ваше имя</label> <textarea name="user-name" type="text" class="name_form_field" required placeholder="Иван Иванов"></textarea></p>
-                                    <p class="email_form"><label for="email">Email</label> <textarea name="user-email" type="email" class="email_form_field"  required placeholder="google@gmail.com"></textarea></p>
+                                    <p class="name_form"><label for="user-name">Ваше имя</label> <input name="user-name" type="text" class="name_form_field" id="user-name" required placeholder="Иван Иванов"></input></p>
+                                    <p class="email_form"><label for="useremail">Email</label> <input name="user-email" type="email" class="email_form_field" id="user-email" required placeholder="google@gmail.com"></input></p>
                                 </div>
-                                <p class="message-form"><label for="message">Сообщение</label> <textarea name="message-name" type="text" class="message_form_field warning" required placeholder="Напишите здесь ваше сообщение."></textarea></p>
+                                <p class="message-form"><label for="message-name">Сообщение</label> <textarea name="message-name" type="text" class="message_form_field warning" required placeholder="Напишите здесь ваше сообщение."></textarea></p>
                             </fieldset>
                             <div class="message_button">
                                 <button type="submit" class="info_button__down">ОТПРАВИТЬ</button>
