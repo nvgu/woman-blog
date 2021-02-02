@@ -93,7 +93,7 @@
     cursor: pointer;
     transition: all 0.5s ease;
 }
-.info_menu__cards_pic-sm:hover{
+.info_menu__card_sm:hover .info_menu__cards_pic-sm{
     transform: scale(1.05);
 }
 .info_menu__cards_pic-lg{
@@ -101,7 +101,7 @@
     left: 0;
     top: 0;
 }
-.info_menu__cards_pic-lg:hover, .info_menu__cards_pic-lg:active, .info_menu__cards_pic-lg:focus{
+.info_menu__card_lg:hover .info_menu__cards_pic-lg{
     filter: blur(5px);
     transition: all 0.5s ease;
 }
@@ -317,7 +317,7 @@
 .message_item{
     max-width: 996px;
     margin: 0 auto;
-    background: url(/img/form.png) no-repeat center;
+    background: url(../img/form.png) no-repeat center;
     height: 637px;
 }
 .message_item__container{
