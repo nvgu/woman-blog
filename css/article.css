@@ -50,6 +50,10 @@
     outline: none;
     border: none;
     padding: 0;
+    cursor: pointer;
+}
+.article_down__counter_button:hover, .article_down__counter_button:active, .article_down__counter_button:focus {
+    opacity: .75;
 }
 .article_down__counter_like{
     font-size: 24px;
@@ -65,10 +69,23 @@
 .article_down__icon:last-child{
     padding-right: 0;
 }
+.article_down_link:hover path, .article_down_link:active path{
+    fill: firebrick;
+}
 .article__link_all{
     margin-top: 37px;
     color: #2E2F22;
     text-decoration: none;
+}
+.article__link_all:hover, .article__link_all:active{
+    opacity: .85;
+}
+.article__link_all svg{
+    transition: all .4s ease;
+}
+.article__link_all:hover svg, .article__link_all:active svg{
+    transform: translateX(30px);
+    transition: all .4s ease;
 }
 .article_link_all__span{
     font-weight: bold;
@@ -193,7 +210,12 @@
     background: transparent;
     box-sizing: border-box;
     border: 1px solid #202117;
+    cursor: pointer;
 }
+.comments_form__button:hover, .comments_form__button:active{
+    opacity: .75;
+}
+    
 @media screen and (max-width: 767px){
     .article_wrapper {
         padding-top: 40px;
@@ -206,6 +228,9 @@
     }
     .comments_item {
         padding: 10px; 
+    }
+    .article_down__icon {
+        padding-right: 10px;
     }
     .comments_form {
         padding: 35px 10px 46px 10px;

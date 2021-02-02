@@ -16,15 +16,16 @@
 .header_logo{
     width: 130px;
     height: 82px;
-}
-.header_wrapper__link{
-    display: flex;
-}   
+} 
 .header_wrapper{
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+}
+.header_wrapper__item_link{
+    text-decoration: none;
+    color: inherit;
 }
 .header_burger{
     display: none;
