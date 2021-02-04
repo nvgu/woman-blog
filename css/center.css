@@ -1,6 +1,14 @@
+.header{
+    position: relative;
+    background-image: url(../img/header-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+    background-position-x: center;
+}
 /*Info style start*/
 
-.info_container{
+.info{
     max-width: 1200px;
     padding: 83px 20px 30px;
     margin: 0 auto;
@@ -79,19 +87,17 @@
     grid-column: span 3;
     min-height: 552px;
     position: relative;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 61px;
+    padding: 0 80px 61px 80px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    cursor: pointer;
-    overflow: hidden;
 }
 .info_menu__cards_pic{
     cursor: pointer;
     transition: all 0.5s ease;
+    max-height: 100%;
+    object-fit: cover;
 }
 .info_menu__card_sm:hover .info_menu__cards_pic-sm{
     transform: scale(1.05);
@@ -100,6 +106,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    border-radius: 5px;
+    width: 100%;
 }
 .info_menu__card_lg:hover .info_menu__cards_pic-lg{
     filter: blur(5px);
@@ -198,13 +206,15 @@
     margin-bottom: 98px;
 }
 .annotation_text{
-   margin-bottom: 30px; 
-   margin-top: 0;
+    text-align: justify;
+    margin-bottom: 30px; 
+    margin-top: 0;
 }
 .annotation_text:last-child{
     margin-bottom: 0;
 }
 .annotation_text__down{
+    text-align: justify;
     font-family: Open Sans;
     font-style: italic;
     font-weight: normal;
@@ -252,19 +262,25 @@
     column-gap: 20px;
 }
 .portfolio_item__container{
-    position: relative;
-    min-height: 525px;
     cursor: pointer;
-    overflow: hidden;
-    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+.portfolio_item__container__left{
+    background-image: url(../img/pic-1.png);
+}
+.portfolio_item__container__center{
+    background-image: url(../img/pic-2.png);
+    background-position: 100%;
+}
+.portfolio_item__container__right{
+    background-image: url(../img/pic-3.png);
+}
+.portfolio_container_title{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.portfolio_container_title{
-    position: absolute;
-    top: 0;
-    left: 0;
     text-align: center;
     box-sizing: border-box;
     padding: 140px 25px;
@@ -318,12 +334,13 @@
     max-width: 996px;
     margin: 0 auto;
     background: url(../img/form.png) no-repeat center;
-    height: 637px;
+    border-radius: 5px;
+    background-size: cover;
 }
 .message_item__container{
     max-width: 837px;
     margin: 0 auto;
-    padding-top: 53px;
+    padding: 53px 10px 62px;
 }
 .message_form__container{
     display: flex;
@@ -435,7 +452,10 @@
 }
 
 @media screen and (max-width: 1279px){
-    .info_container{
+    .header{
+        min-height: 50vh;
+    }
+    .info{
         padding-top: 45px;
         padding-bottom: 30px;
     }
@@ -475,10 +495,7 @@
         padding-top: 20px;
     }
     .portfolio_container_title{
-        padding: 70px 25px;
-    }
-    .portfolio_item__container {
-        min-height: 421px;
+        padding: 100px 25px;
     }
     .porfolio_item__caption_center{
         margin-bottom: 24px;
@@ -489,7 +506,7 @@
     }
 }
 @media screen and (max-width: 1023px){
-    .info_container {
+    .info {
         padding: 25px 15px 20px 15px;
     }
     .info_menu__title {
@@ -546,7 +563,7 @@
         font-size: 85%;
     }
     .annotation {
-        padding: 5px 15px 15px;    
+        padding: 25px 15px 25px;    
     }   
     .annotation_menu {
         margin-bottom: 20px;
@@ -578,7 +595,7 @@
         top: -9px;
     }
     .portfolio {
-        padding: 5px 15px 15px;    
+        padding: 35px 15px 15px;    
     }
     .portfolio_caption_title {
         font-size: 25px;
@@ -589,9 +606,6 @@
     }
     .portfolio_item {
         column-gap: 5px;
-    }
-    .portfolio_item__container {
-        min-height: 325px;
     }
     .porfolio_item__caption {
         font-size: 16px;
@@ -628,27 +642,17 @@
     }
 }
 @media screen and (max-width: 767px){
-    .info_container {
-        padding: 15px 15px 10px 15px;
+    .info {
+        padding: 35px 15px 10px 15px;
     }
     .info_menu {
-        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 25px;
     }
-    .info_menu__container{
-        align-items: center;
-    }
-    .info_menu__container_button {
-        width: 100px;
-        height: 25px;
-        padding-left: 5px;
-        font-size: 60%;
-        border-radius: 5px;
-    }
-    .info_menu__container_icon {
-        width: 9px;
-        height: 7px;
-        top: 9px;
-        right: 7px;
+    .info_menu__title {
+        padding: 0;
+        margin-bottom: 15px;
     }
     .info_menu__cards {
         column-gap: 5px;
@@ -715,10 +719,14 @@
         padding: 15px 0 4px;
     }
     .annotation_container {
-        display: block;
+        flex-direction: column;
     }
     .annotation_pic{
         width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        object-position: 50% 40%;
     }
     .annotation_title{
         margin-left: 0;
@@ -734,32 +742,10 @@
     }
     .portfolio_item__container{
         grid-column: span 3;
-        min-height: 200px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 31px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        width: 100%;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .portfolio_pic{
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 5px;
     }
     .portfolio_container_title {
         display: flex;
         flex-direction: column;
-        max-width: 100%;
-        top: 0
     }
     .portfolio_container_title {
         padding: 25px;
@@ -774,10 +760,10 @@
         flex-direction: column;
     }
     .message{
-        padding: 5px 15px 15px;
+        padding: 25px 15px 35px;
     }
     .message_item__container {
-        padding: 10px;
+        padding: 20px;
     }
     .message_form__container {
         padding-bottom: 10px;
