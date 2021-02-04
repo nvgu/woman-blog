@@ -66,9 +66,6 @@
     .header_wrapper__item{
         padding-right: 60px;
     }
-    .header_burger__menu{
-        display: none;
-    }
 }
 @media screen and (max-width: 1023px){
     .header_wrapper__nav{
@@ -93,7 +90,7 @@
         display: none;
     }
     .header_burger{
-        margin: 0;
+        margin: 10px;
     }
 }
 
