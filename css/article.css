@@ -60,12 +60,18 @@
     padding: 0;
     cursor: pointer;
 }
-.article_down__counter_button:hover, .article_down__counter_button:active, .article_down__counter_button:focus {
+.article_down__counter_button:hover{
     opacity: .75;
 }
 .article_down__counter_like{
     font-size: 24px;
     line-height: 26px;
+}
+.added path{
+    fill: firebrick;
+}
+.added span{
+    color: firebrick;
 }
 .article_down__items{
     padding-left: 0;
