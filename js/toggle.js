@@ -1,10 +1,15 @@
 (function () {
-    const burgerButton = document.querySelector('.header_nav__toggle');
-    const menu = document.querySelector('.header_toggle__menu');
-    const overlay = document.querySelector('.mobile_overlay');
+    const menuStyle = document.getElementById('layout')
+    const burgerButton = document.getElementById('header-button');
     burgerButton.addEventListener('click', () => {
-        burgerButton.classList.toggle('opened');
-        menu.classList.toggle('menu_active');
-        overlay.classList.toggle('overlay_active');
+        burgerButton.classList.toggle('menu-active');
+        menuStyle.classList.toggle('menu-style');
     });
+    document.addEventListener('click', outSideEventListener);
+    function outSideEventListener(event) {
+        if(event.target.id != 'header-button' && event.target.id != 'header-menu' && event.target.tagName != 'LI' && event.target.tagName != 'A') {
+            burgerButton.classList.remove('menu-active');
+            menuStyle.classList.remove('menu-style'); 
+        };
+    };
 })();

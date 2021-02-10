@@ -1,13 +1,11 @@
-.header{
-    position: relative;
+.intro{
     background-image: url(../img/header-img.png);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 80vh;
+    min-height: 50vh;
+    padding: 200px 0;
     background-position-x: center;
 }
-/*Info style start*/
-
 .info{
     max-width: 1200px;
     padding: 83px 20px 30px;
@@ -447,13 +445,13 @@
     box-sizing: border-box;
     border-radius: 10px;
     outline: none;
+
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid #000000;
 }
-
 @media screen and (max-width: 1279px){
-    .header{
-        min-height: 50vh;
+    .intro{
+        padding: 100px 0;
     }
     .info{
         padding-top: 45px;
@@ -506,6 +504,9 @@
     }
 }
 @media screen and (max-width: 1023px){
+    .intro{
+        padding: 20px 0;
+    }
     .info {
         padding: 25px 15px 20px 15px;
     }
@@ -642,6 +643,9 @@
     }
 }
 @media screen and (max-width: 767px){
+    .intro{
+        padding: 0;
+    }
     .info {
         padding: 35px 15px 10px 15px;
     }
