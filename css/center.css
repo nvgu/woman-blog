@@ -5,10 +5,11 @@
     min-height: 50vh;
     padding: 200px 0;
     background-position-x: center;
+    margin-bottom: 50px;
 }
 .info{
     max-width: 1200px;
-    padding: 83px 20px 30px;
+    padding: 33px 20px 30px;
     margin: 0 auto;
 }
 .info_menu{
@@ -76,6 +77,9 @@
     display: flex;
     flex-direction: column;
 }
+.hidden{
+    display: none;
+}
 .info_menu__card_sm{
     grid-column: span 2;
     transition: all 0.5s ease;
@@ -87,8 +91,6 @@
     position: relative;
     padding: 0 80px 61px 80px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
 }
 .info_menu__cards_pic{
@@ -175,7 +177,7 @@
 /*Annotation style start*/
 
 .annotation{
-    padding: 11px 20px 30px;
+    padding: 11px 20px 89px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -238,7 +240,7 @@
 /*Portfolio style start*/
 
 .portfolio{
-    padding: 99px 20px 30px;
+    padding: 30px 20px 60px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -312,7 +314,7 @@
 /*Message style start*/
 
 .message{
-    padding: 55px 20px 85px;
+    padding: 25px 20px 85px;
     max-width: 996px;
     margin: 0 auto;
 }
@@ -449,12 +451,30 @@
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid #000000;
 }
+.info_button__submit{
+    width: 224px;
+    height: 46px;
+    border: 1px solid;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.info_button__submit:hover, .info_button__submit:focus, .info_button__submit:active{
+    opacity: .75;
+} 
+.warning{
+    border-color: firebrick;
+    color: firebrick;
+}
 @media screen and (max-width: 1279px){
     .intro{
         padding: 100px 0;
+        margin-bottom: 30px;
     }
     .info{
-        padding-top: 45px;
+        padding-top: 15px;
         padding-bottom: 30px;
     }
     .info_menu {
@@ -506,9 +526,10 @@
 @media screen and (max-width: 1023px){
     .intro{
         padding: 20px 0;
+        margin-bottom: 20px;
     }
     .info {
-        padding: 25px 15px 20px 15px;
+        padding: 15px 15px 20px 15px;
     }
     .info_menu__title {
         font-size: 25px;
@@ -557,11 +578,6 @@
     }
     .info_button {
         margin-top: 30px;
-    }
-    .info_button__down {
-        width: 165px;
-        height: 40px;
-        font-size: 85%;
     }
     .annotation {
         padding: 25px 15px 25px;    
@@ -645,9 +661,10 @@
 @media screen and (max-width: 767px){
     .intro{
         padding: 0;
+        margin-bottom: 25px;
     }
     .info {
-        padding: 35px 15px 10px 15px;
+        padding: 10px 15px 10px 15px;
     }
     .info_menu {
         flex-direction: column;
@@ -722,6 +739,11 @@
         line-height: 15px;
         padding: 15px 0 4px;
     }
+    .info_button__down {
+        width: 165px;
+        height: 40px;
+        font-size: 85%;
+    }
     .annotation_container {
         flex-direction: column;
     }
@@ -779,5 +801,10 @@
     .email_form {
         padding: 0;
         width: 100%;
+    }
+    .info_button__submit {
+        width: 165px;
+        height: 40px;
+        font-size: 85%;
     }
 }

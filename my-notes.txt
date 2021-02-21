@@ -1,0 +1,211 @@
+category.js
+const containers = document.querySelectorAll('.info_menu__card');
+const filter = document.querySelector('.info_menu__container_button');
+filter.onchange = function () {
+    for (let container of containers) {
+        if(container.dataset.category !== filter.value && filter.value !== 'all'){
+            container.classList.add('hidden');
+        } else {
+            container.classList.remove('hidden');
+        }
+    };
+};
+
+comments.js
+
+// объект с элементами окна необходимого для добавление книг
+    var addMenu = {
+        //идентификатор всего меню для добавления книг
+        addMenu : document.getElementById('addMenu'),
+
+        // Название книги {label and input}
+        addMenu_L_nameBook : document.getElementById('addMenu_L_nameBook'),
+        addMenu_I_nameBook : document.getElementById('addMenu_I_nameBook'),
+
+        // Автор {label and input}
+        addMenu_L_author : document.getElementById('addMenu_L_author'),
+        addMenu_I_author : document.getElementById('addMenu_I_author'),
+
+        // Год издания {label and input}
+        addMenu_L_year : document.getElementById('addMenu_L_year'),
+        addMenu_I_year : document.getElementById('addMenu_I_year'),
+
+        // Ссылка на изображение {label and input}
+        addMenu_L_linkOnYear : document.getElementById('addMenu_L_linkOnYear'),
+        addMenu_I_linkOnYear : document.getElementById('addMenu_I_linkOnYear'),
+
+        // Кнопки
+        addMenu_saveBook : document.getElementById('addMenu_saveBook'),
+        addMenu_deleteBook : document.getElementById('addMenu_deleteBook'),
+        addMenu_changeBook : document.getElementById('addMenu_changeBook')
+
+    };
+
+    // идентификатор главного контейнера
+    var mainContainer = document.getElementById('mainContainer');
+
+    // кнопка для вызова окна для добавления информации
+    var addBook = document.getElementById('addBook');
+
+    var addBookInfo = document.getElementById('addBookInfo');
+
+    addBook.onclick = function () {
+        addMenu.addMenu.className = 'add';
+        mainContainer.className = 'hidden';
+        addBookInfo.className = 'text-center text-info';
+    };
+
+    addMenu.addMenu_deleteBook.onclick = function () {
+        addMenu.addMenu.className = 'add hidden';
+        mainContainer.className = 'container';
+    };
+
+    var counterForIdBooks = 0;
+
+    addMenu.addMenu_saveBook.onclick = function () {
+
+    // Название книги
+    if(addMenu.addMenu_I_nameBook.value === ''){
+        addMenu.addMenu_L_nameBook.style.color = 'red';
+        addMenu.addMenu_L_nameBook.innerHTML = 'Поле с <i>названием книги</i> не может быть пустым';
+    }else {
+        addMenu.addMenu_L_nameBook.style = 'black';
+        addMenu.addMenu_L_nameBook.innerHTML = 'Название книги';
+    }
+
+    // Автор
+    if(addMenu.addMenu_I_author.value === ''){
+        addMenu.addMenu_L_author.style.color = 'red';
+        addMenu.addMenu_L_author.innerHTML = 'Поле с <i>именем</i> автора не может быть пустым';
+    }else {
+        addMenu.addMenu_L_author.style.color = 'black';
+        addMenu.addMenu_L_author.innerHTML = 'Автор';
+    }
+
+    // Год издания
+    if(addMenu.addMenu_I_year.value === ''){
+        addMenu.addMenu_L_year.style.color = 'red';
+        addMenu.addMenu_L_year.innerHTML = 'Поле с <i>годом издания</i> не может быть пустым';
+    }else {
+        addMenu.addMenu_L_year.style.color = 'black';
+        addMenu.addMenu_L_year.innerHTML = 'Год издания';
+    }
+
+    // Ссылка на изображение
+    if(addMenu.addMenu_I_linkOnYear.value === ''){
+        addMenu.addMenu_L_linkOnYear.style.color = 'red';
+        addMenu.addMenu_L_linkOnYear.innerHTML = 'Поле с <i>ссылкой на избражение</i> не может быть пустым';
+    }else {
+        addMenu.addMenu_L_linkOnYear.style.color = 'black';
+        addMenu.addMenu_L_linkOnYear.innerHTML = 'Ссылка на изображение';
+    }
+
+    if(addMenu.addMenu_L_nameBook.textContent === 'Название книги' && addMenu.addMenu_L_author.textContent === 'Автор' &&
+        addMenu.addMenu_L_year.textContent === 'Год издания' && addMenu.addMenu_L_linkOnYear.textContent === 'Ссылка на изображение'){
+        addBookOnLibrary();
+    }else {console.log('!!!');}
+
+    };
+    
+    function addBookOnLibrary() {
+
+        // получает id контейнера в котором находятся книги
+        var main = document.getElementById('mainCol-md-12');
+
+        // создает div и задает ему необходимый класс
+        var div = document.createElement('div');
+        div.className = 'col-sm-3';
+        div.id = counterForIdBooks++;
+
+        // создает текст h4
+        var h4 = document.createElement('h4'); h4.className = 'text-center';
+        h4.innerHTML = addMenu.addMenu_I_nameBook.value;
+
+        // создает картинку
+        var img = document.createElement('img');
+        img.style = 'width: 150px; height: 150px;';
+        img.src = addMenu.addMenu_I_linkOnYear.value;
+
+        // указание имени автора
+        var author = document.createElement('p');
+        author.id = 'author';
+        author.innerText = addMenu.addMenu_I_author.value;
+        author.className = 'hidden';
+
+        // указание года издания
+        var year = document.createElement('p');
+        year.id = 'year';
+        year.innerHTML = addMenu.addMenu_I_year.value;
+        year.className = 'hidden';
+
+        // кнопка редактировать
+        var btnEdit = document.createElement('button');
+        btnEdit.className = 'btn btn-primary btn-block';
+        btnEdit.innerHTML = 'Редактировать';
+        btnEdit.onclick = function () {
+            var r = document.getElementById(this.parentNode.id);
+            editBook(r);
+        };
+
+        function editBook(r) {
+            addMenu.addMenu.className = 'add';
+            mainContainer.className = 'hidden';
+            addMenu.addMenu_saveBook.className = 'hidden';
+            addMenu.addMenu_deleteBook.className = 'hidden';
+            addBookInfo.className = 'hidden';
+            addMenu.addMenu_changeBook.className = 'btn btn-info';
+
+            addMenu.addMenu_I_nameBook.value = r.childNodes[0].textContent;
+            addMenu.addMenu_I_author.value = r.childNodes[3].textContent;
+            addMenu.addMenu_I_year.value = r.childNodes[4].textContent;
+            addMenu.addMenu_I_linkOnYear.value = r.childNodes[1].src;
+
+            addMenu.addMenu_changeBook.onclick = function () {
+                addMenu.addMenu.className = 'hidden';
+                mainContainer.className = 'container';
+
+                r.childNodes[0].textContent = addMenu.addMenu_I_nameBook.value;
+                r.childNodes[3].textContent = addMenu.addMenu_I_author.value;
+                r.childNodes[4].textContent = addMenu.addMenu_I_year.value;
+                r.childNodes[1].src = addMenu.addMenu_I_linkOnYear.value;
+
+                addMenu.addMenu_changeBook.className = 'hidden';
+                addMenu.addMenu_saveBook.className = 'btn btn-primary';
+                addMenu.addMenu_deleteBook.className = 'btn btn-default';
+
+                clearAddForm();
+            }
+        }
+
+        // кнопка удалить
+        var btnDelete = document.createElement('button');
+        btnDelete.className = 'btn btn-danger btn-block';
+        btnDelete.innerHTML = 'Удалить';
+
+        btnDelete.onclick = function () {
+            var r = document.getElementById(this.parentNode.id);
+            r.remove();
+        }
+
+        // параграф для отступа
+        var p = document.createElement('p');
+
+        main.appendChild(div);
+        div.appendChild(h4);
+        div.appendChild(img);
+        div.appendChild(p);
+        div.appendChild(author);
+        div.appendChild(year);
+        div.appendChild(btnEdit);
+        div.appendChild(btnDelete);
+        clearAddForm();
+        addMenu.addMenu.className = 'hidden';
+        mainContainer.className = 'container';
+    }
+    
+    function clearAddForm() {
+        addMenu.addMenu_I_nameBook.value = '';
+        addMenu.addMenu_I_author.value = '';
+        addMenu.addMenu_I_year.value = '';
+        addMenu.addMenu_I_linkOnYear.value = '';
+    }

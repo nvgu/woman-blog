@@ -1,7 +1,4 @@
 /*Header style start*/
-.menu-style .header{
-    position: absolute;
-}
 .header{
     position: fixed;
     width: 100%;
@@ -34,6 +31,9 @@
 .header_wrapper__item_link{
     text-decoration: none;
     color: inherit;
+}
+.mobile_menu{
+    display: none;
 }
 .header_nav__toggle{
     display: none;
@@ -142,6 +142,9 @@
 @media screen and (max-width: 1023px){
     .header_wrapper__list{
         display: none;
+    }
+    .mobile_menu{
+        display: block;
     }
     .header_nav__toggle{
         display: flex;

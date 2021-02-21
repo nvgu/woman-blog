@@ -6,6 +6,7 @@
     min-height: 50vh;
     background-position-x: center;
     padding: 250px 0;
+    margin-bottom: 50px;
 }
 .article{
     max-width: 1200px;
@@ -16,7 +17,7 @@
 }
 .article_wrapper{
     max-width: 998px;
-    padding-top: 85px;
+    padding-top: 35px;
 }
 .article_menu{
     display: flex;
@@ -91,6 +92,7 @@
     margin-top: 37px;
     color: #2E2F22;
     text-decoration: none;
+    margin-bottom: 35px;
 }
 .article__link_all:hover, .article__link_all:active{
     opacity: .85;
@@ -110,7 +112,7 @@
 }
 .section_comments{
     max-width: 793px;
-    padding-top: 65px;
+    padding-top: 30px;
 }
 .comments_item{
     background: #ECE1E1;
