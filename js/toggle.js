@@ -1,17 +1,22 @@
-const mobileMenu = document.querySelector('.mobile_menu');0
-mobileMenu.addEventListener('click', mobileMenuEventListener);
+const scrollFrozen = document.getElementById('layout');
+const burgerButton = scrollFrozen.querySelector('.header_nav__toggle');
+const mobileMenu = scrollFrozen.querySelector('.mobile_menu');
+const burgerMenu = mobileMenu.querySelector('.header_toggle__menu');
+const overlay = mobileMenu.querySelector('.mobile_overlay');
 
-function mobileMenuEventListener(event) {
-    const menuStyle = document.getElementById('layout');
-    const burgerButton = document.getElementById('header-button');
-    const burgerMenu = document.getElementById('header-menu');
+    burgerButton.addEventListener('click', () => { 
+            burgerButton.classList.toggle('button-active');
+            burgerMenu.classList.toggle('menu-active');
+            overlay.classList.toggle('overlay');
+            scrollFrozen.classList.toggle('scroll-frozen');
+   });
 
-    if (event.target == burgerButton) {
-        burgerButton.classList.add('menu-active');
-        menuStyle.classList.add('menu-style');
-
-    } else if (event.target !== burgerMenu && !event.target.matches('li, a, svg')) {
-        burgerButton.classList.remove('menu-active');
-        menuStyle.classList.remove('menu-style');
-    }
-}
+    mobileMenu.addEventListener( 'click', outSideCloseMenu);
+    function outSideCloseMenu(event) {
+        if ( !burgerMenu.contains(event.target))  { 
+            burgerButton.classList.remove('button-active');
+            burgerMenu.classList.remove('menu-active');
+            overlay.classList.remove('overlay');
+            scrollFrozen.classList.remove('scroll-frozen');           
+        } 
+    };  
