@@ -1,3 +1,4 @@
+(function () {
 const scrollFrozen = document.getElementById('layout');
 const burgerButton = scrollFrozen.querySelector('.header_nav__toggle');
 const mobileMenu = scrollFrozen.querySelector('.mobile_menu');
@@ -13,10 +14,11 @@ const overlay = mobileMenu.querySelector('.mobile_overlay');
 
     mobileMenu.addEventListener( 'click', outSideCloseMenu);
     function outSideCloseMenu(event) {
-        if ( !burgerMenu.contains(event.target))  { 
+        if ( !burgerMenu.contains(event.target) )  { 
             burgerButton.classList.remove('button-active');
             burgerMenu.classList.remove('menu-active');
             overlay.classList.remove('overlay');
             scrollFrozen.classList.remove('scroll-frozen');           
         } 
     };  
+})();

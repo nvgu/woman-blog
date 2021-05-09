@@ -2,7 +2,8 @@ html {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1px;
     height: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 label{
     padding-bottom: 12px;

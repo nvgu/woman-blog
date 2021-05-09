@@ -9,6 +9,7 @@ document.querySelector('.comments_form__button').onclick = function (event) {
         text: textFieldValue,
     });
     createCommentHTMLElement(nameFieldValue, textFieldValue);
+
 }
 
 /**
@@ -35,37 +36,58 @@ function loadComments(){
     return comments;
 
 }
-
+function deleteCommentLokalStorage (index) {
+    comments = JSON.parse(localStorage.getItem('comments'))
+    comments.splice(index, 1);
+    localStorage.setItem('comments', JSON.stringify(comments));
+};
 /**
  * Создаем html элемент комментария
  * 
  * @param {string} name - автор
  * @param {string} text - комментарий
+ * @param {string} button - кнопка для удаления комментария
  */
-function createCommentHTMLElement(name, text) {
+function createCommentHTMLElement(name, text, index) {
     const commentList = document.querySelector('.comments_item');
 
     const newComment = document.createElement('li');
-    const newName = document.createElement('p');
+    const newName = document.createElement('h3');
     const newText = document.createElement('p');
+    const deleteButton = document.createElement('button');
   
     newComment.classList.add('comment');
     newName.classList.add('comment-name');
     newText.classList.add('comment-text');
+    deleteButton.classList.add('comment-button');
 
     commentList.append(newComment);
     newComment.append(newName);
     newComment.append(newText);
+    newComment.append(deleteButton);
 
     newName.innerHTML = name;
     newText.innerHTML = text;
-    
+    deleteButton.innerHTML = 'Удалить'; 
+    deleteButton.setAttribute('data', index);
+
+    deleteButton.addEventListener('click', deleteComment);
 }
 
+function deleteComment (event) {
+    event.target.parentElement.remove();
+    const index = event.target.getAttribute('data');
+    deleteCommentLokalStorage(index);    
+};
+// действие в момент загрузки страницы
 (function(){
-
     const comments = loadComments();
-    comments.forEach(comment => {
-        createCommentHTMLElement(comment.name, comment.text)
+    comments.forEach((comment, index) => {
+        createCommentHTMLElement(comment.name, comment.text, index);
+    });
+    const deleteButtons = document.querySelectorAll('.comment-button');
+    deleteButtons.forEach((deleteButton) => { 
+        deleteButton.addEventListener('click', deleteComment);
     });
 })();
+
